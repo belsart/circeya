@@ -1,0 +1,71 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/vars.scss';
+
+.slider {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        '. h2 h2 h2 h2 h2 h2 h2'
+        '. box box box box box box box';
+    margin: 160px 0;
+    overflow: hidden;
+
+    @media (max-width: 960px) {
+        display: flex;
+        flex-direction: column;
+    }
+    @media (max-width: 481px) {
+        margin: 70px 0;
+    }
+}
+
+.h2 {
+    @include header();
+    color: $black;
+    text-transform: uppercase;
+    grid-area: h2;
+    margin-bottom: 124px;
+    @media (max-width: 481px) {
+        font-size: 24px;
+        padding: 0 20px;
+        margin-bottom: 56px;
+    }
+}
+
+.slideBox {
+    display: flex;
+    position: relative;
+    grid-area: box;
+
+    @media (max-width: 960px) {
+        overflow: auto;
+    }
+
+    @media (max-width: 480px) {
+        padding-left: 20px;
+    }
+}
+
+.slide {
+    box-sizing: cover;
+    width: 320px;
+    margin-left: 40px;
+    position: relative;
+    height: 100%;
+
+    &:nth-child(1) {
+        margin-left: 0;
+    }
+
+    // @media (max-width: 1700px) {
+    //     width: 280px;
+    // }
+    // @media (max-width: 1500px) {
+    //     width: 240px;
+    // }
+    // @media (max-width: 480px) {
+    //     width: 222px;
+    //     margin-left: 20px;
+    // }
+}

@@ -1,0 +1,59 @@
+@import '../../assets/styles/_mixins.scss';
+@import '../../assets/styles/_vars';
+
+.header {
+    background: linear-gradient($dark, $light);
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.wrapper {
+    // max-width: 1400px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: '. logo logo . . phone phone .';
+    align-items: center;
+    height: 100px;
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    @media (max-width: 961px) {
+        height: 60px;
+        padding: 0 20px;
+    }
+}
+
+.logo {
+    grid-area: logo;
+    width: 262px;
+    height: 35px;
+    @media (max-width: 961px) {
+        width: 118px;
+        height: 20px;
+    }
+}
+
+.phone {
+    @include phone();
+    grid-area: phone;
+    text-align: right;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.phoneIcon {
+    width: 24px;
+    height: 24px;
+    display: none;
+    @media (max-width: 1024px) {
+        display: block;
+        grid-area: icon;
+    }
+}

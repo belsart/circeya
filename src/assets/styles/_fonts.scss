@@ -1,0 +1,28 @@
+// @import './_vars.scss';
+
+@font-face {
+    font-family: 'Orchidea Pro Md';
+    src: url('./../fonts/OrchideaPro/OrchideaPro-Medium.eot');
+    src: local('Orchidea Pro Medium'), local('OrchideaPro-Medium'),
+        url('./../fonts/OrchideaPro/OrchideaPro-Medium.eot?#iefix')
+            format('embedded-opentype'),
+        url('./../fonts/OrchideaPro/OrchideaPro-Medium.woff2') format('woff2'),
+        url('./../fonts/OrchideaPro/OrchideaPro-Medium.woff') format('woff'),
+        url('./../fonts/OrchideaPro/OrchideaPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Manrope-Medium';
+    src: url('./../fonts/Manrope/Manrope-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('./../fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}

@@ -1,0 +1,21 @@
+@import './../../assets/styles/vars';
+@import './../../assets/styles/mixins';
+
+.footer {
+    background-color: $black;
+    height: 200px;
+    position: relative;
+    margin-top: 160px;
+    @media (max-width: 461px) {
+        margin-top: 80px;
+    }
+}
+
+.footerText {
+    @include footer();
+    color: $white;
+    position: absolute;
+    bottom: 18px;
+    text-align: center;
+    width: 100%;
+}
