@@ -10,17 +10,7 @@ const Horizontable = ({ children }) => {
     }
 
     return (
-        <div
-            className={styles.horizontable}
-            id="horizontable"
-            ref={ref}
-            // onTouchStart={onTouchDown}
-            // onTouchMove={onTouchMove}
-            // onMouseDown={onMouseDown}
-            // onMouseMove={onMouseMove}
-            // onMouseUp={onDown}
-            // onMouseLeave={onDown}
-        >
+        <div className={styles.horizontable} id="horizontable" ref={ref}>
             {children}
         </div>
     );
